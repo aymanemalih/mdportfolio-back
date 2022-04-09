@@ -9,4 +9,8 @@ import java.util.List;
 @Repository
 public interface CityDao extends JpaRepository<City, Long> {
     List<City> findByCountryCode(String code);
+
+    int deleteByCode(String code);
+
+    City findByCode(String code);
 }

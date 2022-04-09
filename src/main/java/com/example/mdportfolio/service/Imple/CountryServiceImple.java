@@ -6,6 +6,7 @@ import com.example.mdportfolio.dao.CountryDao;
 import com.example.mdportfolio.service.facade.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -35,6 +36,7 @@ public class CountryServiceImple implements CountryService {
     }
 
     @Override
+    @Transactional
     public int deleteByCode(String code) {
         return countryDao.deleteByCode(code);
     }

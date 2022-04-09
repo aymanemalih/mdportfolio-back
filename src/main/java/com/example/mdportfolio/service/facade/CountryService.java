@@ -10,4 +10,6 @@ public interface CountryService {
     Country save(Country country);
 
     int deleteByCode(String code);
+
+    Country findByCode(String code);
 }
